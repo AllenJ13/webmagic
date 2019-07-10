@@ -1,0 +1,77 @@
+2019-07-09 11:03:06 上午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='https://kuaibao.jd.com/?ids=176866571,176715149,173053608,213082069', method='null', extras=null, priority=0, headers={}, cookies={}} error
+org.jsoup.select.Selector$SelectorParseException: Could not parse query '_2Kb8-nplK47lBDl_iifFWM': unexpected token at '_2Kb8-nplK47lBDl_iifFWM'
+	at org.jsoup.select.QueryParser.findElements(QueryParser.java:204)
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:59)
+	at org.jsoup.select.QueryParser.parse(QueryParser.java:42)
+	at org.jsoup.select.Selector.<init>(Selector.java:86)
+	at org.jsoup.select.Selector.select(Selector.java:108)
+	at org.jsoup.nodes.Element.select(Element.java:322)
+	at us.codecraft.webmagic.selector.CssSelector.selectElements(CssSelector.java:93)
+	at us.codecraft.webmagic.selector.HtmlNode.selectElements(HtmlNode.java:71)
+	at us.codecraft.webmagic.selector.HtmlNode.$(HtmlNode.java:110)
+	at us.codecraft.webmagic.selector.AbstractSelectable.css(AbstractSelectable.java:18)
+	at com.xuexi.webmagic.JobProcessor.process(JobProcessor.java:14)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-09 19:56:37 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='https://www.jd.com/', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.IllegalArgumentException: invalid regex [9.*
+	at us.codecraft.webmagic.selector.RegexSelector.compileRegex(RegexSelector.java:38)
+	at us.codecraft.webmagic.selector.RegexSelector.<init>(RegexSelector.java:47)
+	at us.codecraft.webmagic.selector.Selectors.regex(Selectors.java:12)
+	at us.codecraft.webmagic.selector.AbstractSelectable.regex(AbstractSelectable.java:77)
+	at com.xuexi.webmagic.JobProcessor.process(JobProcessor.java:29)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.regex.PatternSyntaxException: Unclosed character class near index 3
+[9.*
+   ^
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.clazz(Pattern.java:2548)
+	at java.util.regex.Pattern.sequence(Pattern.java:2063)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1054)
+	at us.codecraft.webmagic.selector.RegexSelector.compileRegex(RegexSelector.java:35)
+	... 12 more
+2019-07-09 20:02:48 下午 [Thread: pool-1-thread-1][ Class:us.codecraft.webmagic.Spider >> Method: us.codecraft.webmagic.Spider$1.run(Spider.java:324) ]
+ERROR:process request Request{url='https://www.jd.com/', method='null', extras=null, priority=0, headers={}, cookies={}} error
+java.lang.IllegalArgumentException: invalid regex *.*
+	at us.codecraft.webmagic.selector.RegexSelector.compileRegex(RegexSelector.java:38)
+	at us.codecraft.webmagic.selector.RegexSelector.<init>(RegexSelector.java:47)
+	at us.codecraft.webmagic.selector.Selectors.regex(Selectors.java:12)
+	at us.codecraft.webmagic.selector.AbstractSelectable.regex(AbstractSelectable.java:77)
+	at com.xuexi.webmagic.JobProcessor.process(JobProcessor.java:29)
+	at us.codecraft.webmagic.Spider.onDownloadSuccess(Spider.java:414)
+	at us.codecraft.webmagic.Spider.processRequest(Spider.java:406)
+	at us.codecraft.webmagic.Spider.access$000(Spider.java:61)
+	at us.codecraft.webmagic.Spider$1.run(Spider.java:320)
+	at us.codecraft.webmagic.thread.CountableThreadPool$1.run(CountableThreadPool.java:74)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.util.regex.PatternSyntaxException: Dangling meta character '*' near index 0
+*.*
+^
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.sequence(Pattern.java:2123)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1054)
+	at us.codecraft.webmagic.selector.RegexSelector.compileRegex(RegexSelector.java:35)
+	... 12 more

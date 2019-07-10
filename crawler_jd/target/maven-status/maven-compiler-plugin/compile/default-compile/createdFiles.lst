@@ -1,0 +1,7 @@
+com\xuexi\jd\service\ItemService.class
+com\xuexi\jd\Application.class
+com\xuexi\jd\service\ItemServiceImpl.class
+com\xuexi\jd\dao\ItemDao.class
+com\xuexi\jd\pojo\Item.class
+com\xuexi\jd\task\ItemTask.class
+com\xuexi\jd\util\HttpUtils.class
